@@ -13,6 +13,7 @@ class Chat extends Component {
 
   componentDidMount(){
     Backend.loadMessages(message => {
+      console.log('message', message);
       this.setState(prevState => {
         return {
           messages: GiftedChat.append(prevState.messages, message)

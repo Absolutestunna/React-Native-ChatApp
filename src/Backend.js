@@ -13,7 +13,6 @@ class Backend {
       messagingSenderId: "243464437655"
     });
     firebase.auth().onAuthStateChanged(user => {
-      console.log('user', user);
       if(user){
         this.setUid(user.uid)
       } else {
@@ -32,7 +31,7 @@ class Backend {
 
   loadMessages(callback){
 
-    this.messagesRef = firebase.database().ref('messages');    
+    this.messagesRef = firebase.database().ref('messages');
     this.messagesRef.off();
     const onRecieve = (data) => {
       const message = data.val();
