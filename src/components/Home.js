@@ -15,7 +15,7 @@ class Home extends Component {
         <Text style={styles.title}>Enter your name:</Text>
         <TextInput
           style={styles.nameInput}
-          placeholder="Joshua Abu"
+          placeholder="Joe Smoe"
           onChangeText={(text) => {
             this.setState({ name: text })
           }}
